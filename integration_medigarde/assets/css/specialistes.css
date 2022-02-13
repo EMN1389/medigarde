@@ -1,0 +1,294 @@
+/*
+Theme Name: Medigarde
+Theme URI: 
+Author: Emilie N'guyen
+Author URI: 
+Description: Site vitrine de Medigarde, Cabinet de recrutement spécialisé dans le secteur du médical, paramédical et médico-social 
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+/* feuille de style Medigarde-rh page des specialistes, mobile first*/
+
+@import url(/assets/css/normalize.css);
+@font-face {
+    font-family: 'Century_gothic';
+    src: url(../font/CenturyGothic.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url(../font/Anton-Regular.ttf) format("truetype");
+    font-weight: 600;
+}
+
+/*variables des couleurs & polices*/ 
+:root {
+    --black: #515153;
+    --white: #f8f8f8;
+    --gray: #707070; 
+    --shadow: #55545477; 
+    --green: #3ab54a;
+    --greenlight: #8cc63f;
+    --greenpastel: #97cd78;
+    --blackgradient: #101011;
+    --anton: 'Anton', sans-serif;
+    --century :'Century_gothic', sans-serif;
+}
+
+body{
+    margin: 0;
+    color: var(--white);
+    font-family: var(--century);
+    background: linear-gradient(to bottom right, #515153,#101011 );
+}
+
+/* title H1 Anton*/
+h1{
+    font-family: var(--anton);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+/*CONTAINER*/ 
+.container{
+    margin: 0 20px 0 20px;
+}
+
+.logo_desk{
+    display : none
+}
+
+/*Nav*/
+    nav{
+        background-color: white;
+    }
+
+    .icon__bars{
+        margin-left: 90%; 
+        padding-top: 5%;
+    }
+        .bar1, .bar2, .bar3 {
+            width: 22px;
+            height: 2px;
+            background-color: var(--black);
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .bar2{
+            width: 18px;
+        }
+
+    .logo{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .nav__menu{
+        display: none;
+    }
+
+/*MAIN*/ 
+/*HEADER*/ 
+
+.header__img{
+    width: 100%;
+    object-fit: fill;
+    position: relative;
+}
+.header__bande{
+    width: 100%;
+    height: 15%;
+    background: rgba(0, 0, 0, 0.397);
+    color: var(--white);
+    text-align: center;
+    margin: 5% 0;
+    position: absolute;
+    top: 30%;
+}
+.header__bande h2{
+    font-size: 0.9em;
+}
+.slogan{
+    text-align: center;
+    color: var(--white);
+}
+/* End Header*/
+
+/*Section Service*/
+
+.services h1{
+    text-align: center;
+    margin-top: 10%;
+}
+
+    .services__card__img img{
+        width: 100%;            
+    }
+    .services__card{
+        background-color: var(--white);
+        margin-top: 10%;
+        border: solid 1px var(--white); 
+    }
+        .services__card__description{
+            text-align: center;
+            color: var(--black);                
+        }
+            .services__card__description h2{                    
+                font-family: var(--anton);                    
+                margin: 0;
+            }
+
+            .services__card__description p{
+                text-align: justify;
+                margin: 5%;
+            }
+
+.container__cta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .cta_offers{
+        text-align: center;
+        text-decoration: none;
+        color: var(--white);
+        background: linear-gradient(to bottom right, #3AB54A, #8CC63F);
+        padding: 10px;
+        border-radius: 10px;   
+        margin: 10%;      
+    }
+
+/* end section service*/
+
+/*section Mutualisation*/
+.mutualisation__title{
+    text-align: center;
+}
+    .mutualisation__container{
+        margin-bottom: 10%;
+    }
+
+        .mutualisation__img{
+            width: 100%;
+        }
+/*end Section Mutualisation
+
+/* Section Presentation*/
+.presentation__title{
+    text-align: center;
+}
+.presentation__counter{
+    text-align: center;
+}
+    .counter__number{
+        font-family: var(--anton);
+        font-size: 2em;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+    }
+        .presentation__description__img{
+            width: 100%;
+        }
+        .presentation__description__des{
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: justify;
+        }
+/*end section description*/
+
+/*section Valeurs*/
+.valeurs{
+    text-align: center;
+    margin-bottom: 20%;
+}
+    .valeurs__valeur img{
+        max-width: 100px;
+        max-height: 100px;
+    }
+/*end section Valeurs
+
+/* Section Form*/
+
+form{
+    max-width: 100vw;
+}
+    .form__btnswitch{
+        display: flex;
+        gap: 20px;
+        margin-bottom: 10%;
+    }
+        .switch_men{
+            width: 20%;
+        }
+        .form__btnswitch p{
+            text-transform: uppercase;
+        }
+    
+    input{
+        border: none;
+        background: transparent;
+        border-bottom: solid 1px var(--white);
+        padding: 2% 17%;
+        color: white;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+
+    .form__container{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    } 
+
+        .form__btn__send{
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            background: linear-gradient(to bottom right, #3AB54A, #8CC63F);
+            padding: 3% 10%;
+            border-radius: 10px;   
+            margin: 10%;   
+            text-transform: uppercase;
+            box-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+        }
+
+/*end section form*/
+
+/*Footer*/ 
+footer{
+    background-color: var(--white);
+    display: flex;
+    position: relative;
+}
+
+footer ul{
+    list-style: none; 
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--black);
+}
+    /*les offres - non visibles en mobile*/ 
+    .footer__offers{
+        display: none;
+    }
+
+    /*réseaux sociaux */ 
+    .footer__social{
+        margin-top: 35%; 
+        position: absolute;
+        left: 54%;       
+    }
+   
+        .footer__social img{
+            width: 25%;
+            margin-right: 10px;        
+        }
+
+    /*mentions légales*/
+    .footer__legal{
+        padding-right: 10%;
+    }
+
+/*end footer*/ 

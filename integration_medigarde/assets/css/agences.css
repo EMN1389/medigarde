@@ -1,0 +1,191 @@
+/*
+Theme Name: Medigarde
+Theme URI: 
+Author: Emilie N'guyen
+Author URI: 
+Description: Site vitrine de Medigarde, Cabinet de recrutement spécialisé dans le secteur du médical, paramédical et médico-social 
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+/* feuille de style Medigarde-rh page agence mobile first*/
+
+@import url(/assets/css/normalize.css);
+@font-face {
+    font-family: 'Century_gothic';
+    src: url(../font/CenturyGothic.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url(../font/Anton-Regular.ttf) format("truetype");
+    font-weight: 600;
+}
+
+/*variables des couleurs & polices*/ 
+:root {
+    --black: #515153;
+    --white: #f8f8f8;
+    --gray: #707070; 
+    --shadow: #55545477; 
+    --green: #3ab54a;
+    --greenlight: #8cc63f;
+    --greenpastel: #97cd78;
+    --blackgradient: #101011;
+    --anton: 'Anton', sans-serif;
+    --century :'Century_gothic', sans-serif;
+}
+
+body{
+    margin: 0;
+    color: var(--white);
+    font-family: var(--century);
+    background: linear-gradient(to bottom right, #515153,#101011 );
+}
+
+/* title H1 Anton*/
+h1{
+    font-family: var(--anton);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+    text-transform: uppercase;
+}
+
+/*CONTAINER*/ 
+.container{
+    margin: 0 20px 0 20px;
+}
+
+.logo_desk{
+    display : none
+}
+
+/*Nav*/
+    nav{
+        background-color: white;
+    }
+
+    .icon__bars{
+        margin-left: 90%; 
+        padding-top: 5%;
+    }
+        .bar1, .bar2, .bar3 {
+            width: 22px;
+            height: 2px;
+            background-color: var(--black);
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .bar2{
+            width: 18px;
+        }
+
+    .logo{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .nav__menu{
+        display: none;
+    }
+
+/*MAIN*/ 
+/*HEADER*/ 
+.header__img{
+    width: 100%;
+    object-fit: fill;
+    position: relative;
+}
+.header__bande{
+    width: 100%;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.397);
+    color: var(--white);
+    text-align: center;
+    margin: 5% 0;
+    position: absolute;
+    top: 25%;
+}
+.header__bande h2{
+    font-size: 0.9em;
+}
+
+/* End Header*/
+
+/*Section Auxerre & Vannes*/
+.auxerre, .vannes{
+    display: flex;   
+}
+.vannes{
+    flex-direction: row-reverse;
+}
+        .auxerre__img img, .vannes__img img{
+            width: 180px;
+            height: 180px;
+            object-fit: cover;            
+        }
+    .auxerre__contact, .vannes__contact{
+        width: 180px;
+        height: 180px;
+        font-size: 0.8em;
+    }
+        .auxerre__contact h2, .vannes__contact h2{
+            font-size: 1.5em;
+            text-align: center;
+            
+        }
+        .auxerre__contact p, .vannes__contact p{
+            margin-left: 15%;
+        }
+    /*end Section Agences Auxerre & Vannes
+
+    /* Section Presentation*/
+    .presentation__title{
+        text-align: center;
+    }
+    .presentation__counter{
+        text-align: center;
+    }
+        .counter__number{
+            font-family: var(--anton);
+            font-size: 2em;
+            text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+        }
+    /*end section description*/
+
+    /*Footer*/ 
+footer{
+    background-color: var(--white);
+    display: flex;
+    position: relative;
+}
+
+footer ul{
+    list-style: none; 
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--black);
+}
+    /*les offres - non visibles en mobile*/ 
+    .footer__offers{
+        display: none;
+    }
+
+    /*réseaux sociaux */ 
+    .footer__social{
+        margin-top: 35%; 
+        position: absolute;
+        left: 54%;       
+    }
+   
+        .footer__social img{
+            width: 25%;
+            margin-right: 10px;        
+        }
+
+    /*mentions légales*/
+    .footer__legal{
+        padding-right: 10%;
+    }
+
+/*end footer*/ 

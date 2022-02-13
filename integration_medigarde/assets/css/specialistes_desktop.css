@@ -1,0 +1,376 @@
+/*
+Theme Name: Medigarde
+Theme URI: 
+Author: Emilie N'guyen
+Author URI: 
+Description: Site vitrine de Medigarde, Cabinet de recrutement spécialisé dans le secteur du médical, paramédical et médico-social 
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+/*Page d'accueil du site Medigarde, desktop */ 
+@import url(/assets/css/normalize.css);
+
+@font-face {
+    font-family: 'Century_gothic';
+    src: url(../font/CenturyGothic.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url(../font/Anton-Regular.ttf) format("truetype");
+    font-weight: 600;
+}
+
+/*variables des couleurs & polices*/ 
+:root {
+    --black: #515153;
+    --white: #f8f8f8;
+    --gray: #707070; 
+    --shadow: #55545477; 
+    --green: #3ab54a;
+    --greenlight: #8cc63f;
+    --greenpastel: #97cd78;
+    --blackgradient: #101011;
+    --anton: 'Anton', sans-serif;
+    --century :'Century_gothic', sans-serif;
+}
+
+
+@media (min-width: 1250px){
+
+    body{
+        font-family: var(--century);
+    }
+    /*CONTAINER*/ 
+    .container{
+        margin: 0 150px 0 150px;
+    }    
+    
+    h1{
+        font-size: 2em;
+    }
+    
+    /*Nav*/
+    nav{
+        display: flex;
+        padding-top: 2%;
+    }
+    
+        .nav___logo__container{
+            width: 40%;
+            margin: 0;
+        }
+            .logo{
+                width: 100%;    
+                margin-bottom: 20px;    
+            }
+    
+    /*Menu burger non visible sur desktop*/
+    .icon__bars{
+        display: none;
+    }
+    
+    .nav__menu{
+        display: flex;
+        list-style: none;
+        gap: 5%;
+        padding-top: 4.5%;
+        width: 100%;
+        height: 20px;
+    }
+        .nav__menu a{
+            text-decoration: none;
+            color: var(--black);
+            transition: 300ms;           
+        }
+    
+        .nav__menu a:hover{
+            color: var(--green);
+            transition: 300ms;   
+        }
+    
+    /*end Nav*/ 
+/*MAIN*/
+/*HEADER*/
+
+.header__img{
+    height:450px; 
+    object-fit: cover;
+}
+
+.header__bande{
+   top: 45%; 
+   height: 30%;
+}
+    .header__bande h1{
+        font-size: 2.5em;
+    }
+    .header__bande h2{
+        font-size: 2em;
+    }
+.slogan{
+    font-size: 2em;
+    font-style: italic;
+}
+header p{
+    text-align: center;
+}
+/* End Header*/
+
+/*Section Service*/
+
+.services__card{
+    display: flex;
+    max-height: 500px;
+    margin-top: 5%;
+}
+    .services__card__description h2{
+        margin-top: 10%;
+        margin-bottom: 3%;
+        text-transform: uppercase;
+        font-size: 2em;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+    }
+
+    /*card placement*/
+    .card__img__placement{
+    clip-path: polygon(0px 0px, 40.23% 0px, 75.96% 100%, 65% 100%, 0px 100%, 0% 50%);
+    height: 500px;
+    } 
+
+    .card__description__placement{
+        position: absolute;
+        right: 13%;
+        height: 400px; 
+        width: 450px;
+        margin: 0; 
+    }
+
+    .card__description__placement p{
+        margin: 0;
+    }
+
+    /*card vacation*/
+    .card__img__vacation{
+        clip-path: polygon(648px 0px, 100% 0px, 100% 100%, 65% 100%, 600px 100%, 30% 100%);
+        height: 500px;
+        margin-left: 150px;
+        object-fit: cover;
+    }
+    .card__description__vacation{
+        position: absolute;
+        left: 13%;
+        margin: 0;
+        height: 400px;
+        width: 450px;
+    }
+    .services__card__vacation p{
+        margin: 0;
+    }
+
+    /*bouton call to action - vers offre*/ 
+    .cta_offers{
+        padding: 2% 3%;
+        font-size: 1.2em;
+        transition: 300ms;
+    }
+    .cta_offers:hover{
+        box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.459), -4px -4px 5px rgba(255, 255, 255, 0.555);
+        transition: 300ms;
+    }
+
+    
+/* end section service */
+
+/* Section Mutualisation*/
+.mutualisation{
+    position: relative;
+}
+    .Lmut{
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 60%;
+        left: -20%;
+        opacity: 60%;
+        top:-90%
+    }
+    .mutualisation__container{
+        margin-bottom: 10%;
+        display: flex;
+    }
+
+        .mutualisation__img{
+            width: 400px; 
+            height: 300px;
+            margin-right: 5%;
+        }
+/*end Section Mutualisation
+
+/* Section Presentation*/
+.presentation{
+    position: relative;
+}
+.presentation__title{
+    margin-top: 10%;
+    font-size: 2em;
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.274), -1px -1px var(--shadow);
+}
+
+    .presentation__counter{
+        display: flex;
+        gap: 15%;
+        margin-left: 50px;
+        margin: 0 150px 0 150px;
+        justify-content: center;
+    } 
+        .counter__number{
+            font-size: 3em;
+        }
+        .presentation__counter__element h4{
+            font-size: 1.5em;
+        }
+    
+    .presentation__description{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 5% 150px 0 150px;
+    }
+        .presentation__description__des{
+            margin-left: 0;
+        }
+
+    .Ldescription{
+        display: block;
+        width: 60%;
+        position: absolute;
+        right: -5%;
+        top: 35%; 
+        z-index: -1;
+        opacity: 60%;
+        
+    }
+/*end section description*/
+
+/*Section Valeurs*/
+.valeurs{
+    margin-bottom: 10%;
+}
+.valeurs__title{
+    margin-top: 10%;
+    font-size: 2em;
+}
+.valeurs__container{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+    .valeurs__valeur h4{
+        font-size: 2em;
+    }
+/*end section Valeurs*/
+
+/* Section Form*/
+.form{
+    margin-bottom: 10%;
+}
+.form__p{
+    text-align: center;
+    font-size: 1.5em;
+}
+.switch_men{
+    width: 8%;
+}
+
+label{
+    text-transform: uppercase;
+    margin-left: 10px;
+    margin-right: 5%;
+}
+input{
+    padding: 1% 8%;
+    margin-bottom: 20px;
+}
+.input__firstname{
+    margin-right: 10%;
+}
+.input__cd{
+    padding: 1% 4%;
+    margin-right: 7%;
+}
+.input__email {
+    padding: 1% 34%;
+}
+.input__etablissement{
+    padding: 1% 29%
+}
+.input__poste{
+    padding: 1% 35%;
+    margin-bottom: 12%;
+}
+    /*bouton envoyer*/
+.go{
+    justify-content: right;
+}
+
+    .form__btn__send{
+        margin: 0;
+        padding: 2% 8%;
+        font-size: 1.2em;
+        margin-top: -5.98%;
+        transition: 300ms;
+    }
+    .form__btn__send:hover{
+        box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.459), -4px -4px 5px rgba(255, 255, 255, 0.555);
+        transition: 300ms;
+    }
+/*end section form*/
+
+/*Footer*/ 
+
+
+.footer__menu{
+    margin-bottom: 10%;
+    margin-left: 135px;
+}
+/*dernières offres*/
+.footer__offers{
+    display: block; 
+}
+    .footer__offers h6{
+        color: var(--black); 
+        font-family: var(--century);
+        font-weight: normal;
+        font-size: 1em;
+        margin: 10% 0 0 16%;
+    }
+
+    /*réseaux sociaux */ 
+    .footer__social{
+        bottom: 70%; 
+        left: 70%;
+    }
+        .footer__social img{
+            width: 20%;
+            margin-right: 0;        
+        }
+
+    /*mentions légales*/ 
+    .footer__legal{
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        /* display: flex;
+        justify-content: center;
+        gap: 40% */
+
+    }
+        .footer__legal ul{
+            display: flex;
+            justify-content: center;
+            gap: 20%; 
+        }
+
+
+}/*end media min-width: 1250px/*   

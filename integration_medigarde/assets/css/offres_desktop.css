@@ -1,0 +1,293 @@
+/*
+Theme Name: Medigarde
+Theme URI: 
+Author: Emilie N'guyen
+Author URI: 
+Description: Site vitrine de Medigarde, Cabinet de recrutement spécialisé dans le secteur du médical, paramédical et médico-social 
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+/*Page d'accueil du site Medigarde,page des offres desktop */ 
+@import url(/assets/css/normalize.css);
+
+@font-face {
+    font-family: 'Century_gothic';
+    src: url(../font/CenturyGothic.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url(../font/Anton-Regular.ttf) format("truetype");
+    font-weight: 600;
+}
+
+/*variables des couleurs & polices*/ 
+:root {
+    --black: #515153;
+    --white: #f8f8f8;
+    --gray: #707070; 
+    --shadow: #55545477; 
+    --green: #3ab54a;
+    --greenlight: #8cc63f;
+    --greenpastel: #97cd78;
+    --blackgradient: #101011;
+    --anton: 'Anton', sans-serif;
+    --century :'Century_gothic', sans-serif;
+}
+
+
+@media (min-width: 1250px){
+
+
+    body{
+        font-family: var(--century);
+    }
+    /*CONTAINER*/ 
+    .container{
+        margin: 0 150px 0 150px;
+    }    
+    
+    h1{
+        font-size: 2em;
+    }
+    
+    /*Nav*/
+    nav{
+        display: flex;
+        padding-top: 2%;
+    }
+    
+        .nav___logo__container{
+            width: 40%;
+            margin: 0;
+        }
+            .logo{
+                width: 100%;    
+                margin-bottom: 20px;    
+            }
+    
+    /*Menu burger non visible sur desktop*/
+    .icon__bars{
+        display: none;
+    }
+    
+    .nav__menu{
+        display: flex;
+        list-style: none;
+        gap: 5%;
+        padding-top: 4.5%;
+        width: 100%;
+        height: 20px;
+    }
+        .nav__menu a{
+            text-decoration: none;
+            color: var(--black);
+            transition: 300ms;           
+        }
+    
+        .nav__menu a:hover{
+            color: var(--green);
+            transition: 300ms;   
+        }
+    
+    /*end Nav*/ 
+    
+/*MAIN*/
+/*Section LastOffers*/ 
+.lastOffer{
+    overflow-x: none;
+}
+    .lastOffer__container{
+        width: 100vw;
+        justify-content: space-around;
+    }
+    .Llast{
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 60%;
+        right: -15%;
+        top: 0; 
+        opacity: 60%;    
+    }
+/*end section lastOffers*/
+
+/*Section Offers*/
+    /*Search bar*/
+    .offers{
+        overflow-x: none; 
+    }
+    .offers__searchbar{
+        width: 2%;
+        height: 100vh;
+    }
+
+    /*end search bar*/ 
+/*Offers*/
+.offers__container{
+    display: block;
+    width: 100vw;
+}
+
+/*Section candidater*/
+
+.candidater__title{
+    margin-top: 10%;
+}
+.candidater__descr{
+    margin-left: 65%;
+    font-size: 1.2em;
+}
+
+.candidater__circle{
+    width: 425px;
+    height: 425px;
+    margin-left: 34%;  
+    margin-top: 0;
+}
+.candidater__circle__top, .candidater__circle__bottom, .candidater__circle__right, .candidater__circle__left{   
+    width: 28%;
+}
+.candidater__etape{
+    bottom: 275px;
+    left: 46.5%
+}
+/*end section candidater*/
+
+/* Section Form*/
+
+.switch_men{
+    width: 8%;
+}
+
+label{
+    text-transform: uppercase;
+    margin-left: 10px;
+    margin-right: 5%;
+}
+input{
+    padding: 1% 8%;
+    margin-bottom: 20px;
+}
+.input__firstname{
+    margin-right: 10%;
+}
+.input__cd{
+    padding: 1% 4%;
+    margin-right: 1%;
+}
+.input__email {
+    padding: 1% 31%;
+}
+.input__pro{
+    padding: 1% 29%
+}
+    /*bouton upload*/
+.up{
+    justify-content: left;
+}
+    .form__btn__upload{
+        padding: 2% 6%;
+        margin-top: 5%;
+        transition: 300ms;
+    }
+
+    .form__btn__upload:hover{
+        box-shadow: 4px 4px 5px rgba(5, 114, 5, 0.459), -4px -4px 5px rgba(11, 126, 16, 0.555);
+        transition: 300ms;
+    }
+    /*bouton envoyer*/
+.go{
+    justify-content: right;
+}
+
+    .form__btn__send{
+        margin: 0;
+        padding: 2% 8%;
+        font-size: 1.2em;
+        margin-top: -5.98%;
+        transition: 300ms;
+    }
+    .form__btn__send:hover{
+        box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.459), -4px -4px 5px rgba(255, 255, 255, 0.555);
+        transition: 300ms;
+    }
+/*end section form*/
+
+/*section appli*/
+
+.appli{
+    margin: 5% 150px
+}
+    .appli h2{
+        font-size: 2.5em;
+        font-family: var(--anton);
+        text-transform: uppercase;
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.274), -1px -1px var(--shadow);
+    }
+        /*IMAGE DU SMARTPHONE*/
+        .appli__mockup{
+            padding-right: 0;
+            padding-left: 16%;
+        }
+            .appli__mockup img{
+                width: 200px
+            }
+
+        /*description de l'application*/
+        .appli__description{
+            font-size: 1.2em;
+            padding: 0 16% 0 7%;
+        }
+            .appli__store img{
+                width: 30%;
+            }
+
+/*end section appli*/
+
+/*Footer*/ 
+.footer__menu{
+    margin-bottom: 10%;
+    margin-left: 135px;
+}
+/*dernières offres*/
+.footer__offers{
+    display: block; 
+}
+    .footer__offers h6{
+        color: var(--black); 
+        font-family: var(--century);
+        font-weight: normal;
+        font-size: 1em;
+        margin: 10% 0 0 16%;
+    }
+
+    /*réseaux sociaux */ 
+    .footer__social{
+        bottom: 70%; 
+        left: 70%;
+    }
+        .footer__social img{
+            width: 20%;
+            margin-right: 0;        
+        }
+
+    /*mentions légales*/ 
+    .footer__legal{
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        /* display: flex;
+        justify-content: center;
+        gap: 40% */
+
+    }
+        .footer__legal ul{
+            display: flex;
+            justify-content: center;
+            gap: 20%; 
+        }
+
+
+}/*end media min-width: 1250px/*    
