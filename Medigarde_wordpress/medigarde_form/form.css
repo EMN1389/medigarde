@@ -1,0 +1,267 @@
+@import url(/assets/css/normalize.css);
+@font-face {
+    font-family: 'Century_gothic';
+    src: url(../font/CenturyGothic.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url(../font/Anton-Regular.ttf) format("truetype");
+    font-weight: 600;
+}
+
+/*variables des couleurs & polices*/ 
+:root {
+    --black: #515153;
+    --white: #f8f8f8;
+    --gray: #707070; 
+    --shadow: #55545477; 
+    --green: #3ab54a;
+    --greenlight: #8cc63f;
+    --greenpastel: #97cd78;
+    --blackgradient: #101011;
+    --anton: 'Anton', sans-serif;
+    --century :'Century_gothic', sans-serif;
+}
+
+body{
+    margin: 0;
+    color: var(--white);
+    font-family: var(--century);
+    background: linear-gradient(to bottom right, #515153,#101011 );
+}
+
+/* title H1 Anton*/
+h1{
+    font-family: var(--anton);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+    text-transform: uppercase;
+}
+
+/* Section Form*/
+
+form{
+    max-width: 100vw;
+}
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        margin-left: 10%;
+    }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--greenlight);
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked+.slider {
+            background-color:var(--green);
+        }
+        
+        input:focus+.slider {
+            box-shadow: 0 0 1px (var(--green));
+        }
+        
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+    .monsieur{
+        margin-top: -5%;
+    }
+
+    input{
+        border: none;
+        background: transparent;
+        border-bottom: solid 1px var(--white);
+        padding: 2% 17%;
+        color: white;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+        .input__pro{
+            padding: 2.5% 23%;
+            background-color: var(--black);
+            color: var(--white);
+        }
+
+    .form__container{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+        
+        .upload{
+            width: 20px;
+            margin-right: 2%;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        .up__input{
+            padding: 3% 2% ;
+            border: none;
+        }
+
+        .form__btn__send{
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            background: linear-gradient(to bottom right, #3AB54A, #8CC63F);
+            padding: 3% 10%;
+            border-radius: 10px;   
+            margin: 10%;   
+            text-transform: uppercase;
+            box-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+        }
+
+/*end section form*/
+
+#snackbar {
+    position: absolute;
+    z-index: 800;
+    top: 0;
+    background-color: rgb(87, 172, 17);
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 30vw;
+    height: 10vh;
+    border-radius: 10px;
+    display: none;
+    animation: 0.5s;
+}
+
+#snackbar p {
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 6%;
+}
+
+@media (max-width: 768px) {
+    #snackbar {
+        position: fixed;
+        z-index: 800;
+        left: 11em;
+        background-color: rgb(87, 172, 17);
+        width: 300px;
+        height: 50px;;
+        border-radius: 10px;
+        display: none;
+        
+    }
+   
+}
+
+
+/* /!\ ATTENTION CHANGEMENT DE MEDIA QUERIES DESKTOP MIN WIDTH 1250px*/
+@media (min-width: 1250px){
+form{
+    margin-bottom: 10%;
+}
+.switch{
+    margin-left: -30px;
+}
+.monsieur{
+    margin-top: -2%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.form__champs{
+    text-align: center;
+}
+    input{
+        padding: 1% 7%;
+        margin-bottom: 20px;
+    }
+        .input__firstname{
+            margin-left: 10%;
+        }
+        
+        .input__tel{
+            margin-left: 10%;
+        }
+        .input__mail{
+            margin-left: 0;
+        }
+        .input__pro{
+            color: var(--white); 
+            background-color: var(--black);
+            padding: 1% 9%; 
+            margin-left: 10%;
+            font-size: 1em;
+        }
+        /*bouton upload*/
+        .up{
+            justify-content: left;
+        }
+            .form__btn__upload{
+                padding: 1% 12%;
+                margin-top: 5%;
+                transition: 300ms;
+            }
+
+            .form__btn__upload:hover{
+                box-shadow: 4px 4px 5px rgba(5, 114, 5, 0.459), -4px -4px 5px rgba(11, 126, 16, 0.555);
+                transition: 300ms;
+            }
+        /*bouton envoyer*/
+        .go{
+            justify-content: right;
+            margin-top: 3%;
+        }
+
+            .form__btn__send{
+                margin: 0;
+                padding: 2% 8%;
+                font-size: 1.2em;
+                margin-top: -5.98%;
+                transition: 300ms;
+            }
+            .form__btn__send:hover{
+                box-shadow: 4px 4px 5px rgba(255, 255, 255, 0.459), -4px -4px 5px rgba(255, 255, 255, 0.555);
+                transition: 300ms;
+            }
+
+
+}/* end Media querie min-width 1250px

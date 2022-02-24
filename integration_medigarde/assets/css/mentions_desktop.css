@@ -1,0 +1,138 @@
+/*
+Theme Name: Medigarde
+Theme URI: 
+Author: Emilie N'guyen
+Author URI: 
+Description: Site vitrine de Medigarde, Cabinet de recrutement spécialisé dans le secteur du médical, paramédical et médico-social 
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+/*Page d'accueil du site Medigarde, page mentions légales desktop */ 
+@import url(/assets/css/normalize.css);
+
+@font-face {
+    font-family: 'Century_gothic';
+    src: url(../font/CenturyGothic.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url(../font/Anton-Regular.ttf) format("truetype");
+    font-weight: 600;
+}
+
+/*variables des couleurs & polices*/ 
+:root {
+    --black: #515153;
+    --white: #f8f8f8;
+    --gray: #707070; 
+    --shadow: #55545477; 
+    --green: #3ab54a;
+    --greenlight: #8cc63f;
+    --greenpastel: #97cd78;
+    --blackgradient: #101011;
+    --anton: 'Anton', sans-serif;
+    --century :'Century_gothic', sans-serif;
+}
+
+
+@media (min-width: 1250px){
+    body{
+        font-family: var(--century);
+    }
+    /*CONTAINER*/ 
+    .container{
+        margin: 0 150px 0 150px;
+    }    
+    
+    h1{
+        font-size: 2em;
+    }
+    
+    /*Nav*/
+    nav{
+        display: flex;
+        padding-top: 2%;
+    }
+    
+        .nav___logo__container{
+            width: 40%;
+            margin: 0;
+        }
+            .logo{
+                width: 100%;    
+                margin-bottom: 20px;    
+            }
+    
+    /*Menu burger non visible sur desktop*/
+    .icon__bars{
+        display: none;
+    }
+    
+    .nav__menu{
+        display: flex;
+        list-style: none;
+        gap: 5%;
+        padding-top: 4.5%;
+        width: 100%;
+        height: 20px;
+    }
+        .nav__menu a{
+            text-decoration: none;
+            color: var(--black);
+            transition: 300ms;           
+        }
+    
+        .nav__menu a:hover{
+            color: var(--green);
+            transition: 300ms;   
+        }
+    
+    /*end Nav*/ 
+
+
+    /*Footer*/ 
+.footer__menu{
+    margin-bottom: 10%;
+    margin-left: 135px;
+}
+/*dernières offres*/
+.footer__offers{
+    display: block; 
+}
+    .footer__offers h6{
+        color: var(--black); 
+        font-family: var(--century);
+        font-weight: normal;
+        font-size: 1em;
+        margin: 10% 0 0 16%;
+    }
+
+    /*réseaux sociaux */ 
+    .footer__social{
+        bottom: 70%; 
+        left: 70%;
+    }
+        .footer__social img{
+            width: 20%;
+            margin-right: 0;        
+        }
+
+    /*mentions légales*/ 
+    .footer__legal{
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        /* display: flex;
+        justify-content: center;
+        gap: 40% */
+
+    }
+        .footer__legal ul{
+            display: flex;
+            justify-content: center;
+            gap: 20%; 
+        }
+
+} /* end media queries min-width: 1250px*/ 

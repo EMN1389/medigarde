@@ -27,7 +27,7 @@
             <div class="bar3"></div>
         </div>
         <a class="nav___logo__container" href="#">
-            <img class="logo"src="assets/images/logo.png" alt="logo_Médigarde-rh">
+            <img class="logo" src="assets/images/logo.png" alt="logo_Médigarde-rh">
         </a>
         <ul class="nav__menu open">
             <li><a href="#">Nos services</a></li>
@@ -35,9 +35,9 @@
             <li><a href="#">Fonctionnement</a></li>
             <li><a href="#">Offres</a></li>
             <li><a href="#">Où nous trouver</a></li>
-            <div class="nav__menu__close">
-                <img src="assets/images/x.png" alt="x for close">
-            </div>
+                <div class="nav__menu__close">
+                    <img src="assets/images/x.png" alt="x for close">
+                </div>
         </ul>
         
     </nav>
@@ -53,8 +53,8 @@
         </header>
         
         <!--SECTION TARGET-->
-        <section class="container target">
-            <p>Une phrase d'accroche comme "vous êtesun professionne de la santé, ou un établissement de santé, médico-social, vous êtes au bon endroit." ...<p>
+        <section class="target container">
+            <p>Une phrase d'accroche comme "vous êtes un professionne de la santé, ou un établissement de santé, médico-social, vous êtes au bon endroit." ...<p>
             <div class="target__cards"> <!--btn pro-->
                 <div class="target__cards__pro">
                     <a href="#"><img class="target__cards__img" src="assets/images/professionnels.jpg" alt="illustration des professionnels du médical, médico-social et paramédical"></a>
@@ -185,8 +185,8 @@
             <div class="candidater__circle">
                 <img data-set="1" class="candidater__circle__top circle" src="assets/images/icones/dominos.png" alt="icone dominos">
                 <img data-set="2" class="candidater__circle__right circle" src="assets/images/icones/fichier.png" alt="icone fichier">
-                <img data-set="3" class="candidater__circle__bottom circle"src="assets/images/icones/telephone.png" alt="icone telephone">
-                <img data-set="4" class="candidater__circle__left circle "src="assets/images/icones/meeting.png" alt="icone entretien">
+                <img data-set="3" class="candidater__circle__bottom circle" src="assets/images/icones/telephone.png" alt="icone telephone">
+                <img data-set="4" class="candidater__circle__left circle" src="assets/images/icones/meeting.png" alt="icone entretien">
             </div>
             <div>
                 <p class="candidater__etape etape1 active" data-ordre="1">Etape 1</p>
@@ -194,26 +194,30 @@
         </section> <!--end section candidater-->
 
         <!--section Formulaire-->
-        <section class="container form">
+        <section class="form container">
             <form>
-
-            <div class="form__btnswitch">
-                <img class="switch_men" src="assets/images/switchM.svg" alt="bouton switch monsieur ou madame"> <!--switch avec JS-->
-                <p>Monsieur</p> <!--switch p avec JS-->
-            </div>
+                <div class="form__btnswitch">
+                    <label class="switch">
+                    <input type="checkbox" class="switch_men">
+                    <span class="slider round"></span>
+                    </label>
+                    <!--switch p avec JS-->
+                    <p class="monsieur">Monsieur</p>
+                </div>
             
-                <label>Nom</label>
-                <input class="input__name">
-                <label>Prenom</label>
-                <input class="input__firstname">
-                <label>Code postal</label>
-                <input class="input__cd">
-                <label>Téléphone</label>
-                <input class="input__tel">
-                <label>E-mail</label>
-                <input class="input__email">
-                <label>Profession</label>
-                <input class="input__pro">
+            <div class="form__champs">
+                <input class="input__name" type="text" name="name"  id="name" placeholder="Nom" required>
+                <input class="input__firstname" type="text" name="firstname" placeholder="Prénom" required>
+                <input class="input__cd" pattern="[0-9]{5}" type="text" maxlength="5" placeholder="Code postal" name="postal" id="postal">
+                <input class="input__tel" pattern="0[1-9][0-9]{8}" type="text" maxlength="10" name="tel" id="tel" placeholder="N° Téléphone">
+                <input class="input__mail" type="email" name="email" id="email" placeholder="Email" required>
+                <select class="input__pro" name="pro" id="pro">
+                    <option value="option1">Infirmière</option>
+                    <option value="option2">Aide Soignante</option>
+                    <option value="option3">Educateur spécialisé</option>
+                    <option value="option4">autre</option>
+                </select>
+            </div>
 
                 <div class="form__container up">
                     <a class= "form__btn__upload" href="#"><img src="assets/images/upload.png" alt="icone pour téléverser un fichier">Joindre un CV </a>
@@ -253,23 +257,29 @@
         <!--SECTION AVIS-->
         <section class="avis">
             <div class="avis__filter"></div>
-            <!--1er avis-->
-                <div class="avis__first">
-                    <div class="avis__photo1"></div>
-                    <div class="avis__container">
-                        <h5>Avis de Mme. nom</h5>
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea numquam at rerum, laboriosam ipsum."</p>
+                <!--flèche de gauche-->
+                    <div class="avis__arrow__left">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
                     </div>
-                    
-                </div>
-            <!--2eme avis-->
-                <div class="avis__first second">
-                    <div class="avis__photo2"></div>
-                    <div class="avis__container">
-                        <h5>Avis de Mme. nom</h5>
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ea numquam at rerum, laboriosam ipsum."</p>
+
+                <!--1er avis-->
+                    <div class="avis__first">
+                        <div class="avis__photo1"></div>
+                        <div class="avis__container">
+                            <h5>Avis de Mme. nom</h5>
+                            <p class="avis__texte">"Avis 1 exemple"</p>
+                        </div>
+
+                <!--flèche de droite-->
+                    <div class="avis__arrow__right">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
                     </div>
-                </div>
+                    <div>
+            </div>
         </section> <!--end section Avis -->
         
         <!--SECTION COLLAB-->

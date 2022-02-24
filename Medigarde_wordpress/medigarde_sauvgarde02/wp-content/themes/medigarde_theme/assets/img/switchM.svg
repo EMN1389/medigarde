@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="227" height="133" viewBox="0 0 227 133">
+  <defs>
+    <filter id="Rectangle_63">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.341" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_64" x="0" y="0" width="131" height="133" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-opacity="0.271"/>
+      <feComposite operator="in" in2="blur-2"/>
+    </filter>
+    <filter id="Rectangle_64-2" x="0" y="0" width="131" height="133" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-3"/>
+      <feFlood flood-opacity="0.161" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-3"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_26" data-name="Groupe 26" transform="translate(-169 -9224)">
+    <g data-type="innerShadowGroup">
+      <rect id="Rectangle_63-2" data-name="Rectangle 63" width="212" height="103" rx="51.5" transform="translate(184 9234)" fill="#97cd78"/>
+      <g transform="matrix(1, 0, 0, 1, 169, 9224)" filter="url(#Rectangle_63)">
+        <rect id="Rectangle_63-3" data-name="Rectangle 63" width="212" height="103" rx="51.5" transform="translate(15 10)" fill="#fff"/>
+      </g>
+      <g id="Rectangle_63-4" data-name="Rectangle 63" transform="translate(184 9234)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="212" height="103" rx="51.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="211" height="102" rx="51" fill="none"/>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <g transform="matrix(1, 0, 0, 1, 169, 9224)" filter="url(#Rectangle_64)">
+        <g id="Rectangle_64-3" data-name="Rectangle 64" transform="translate(15 10)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="101" height="103" rx="50.5" stroke="none"/>
+          <rect x="0.5" y="0.5" width="100" height="102" rx="50" fill="none"/>
+        </g>
+      </g>
+      <rect id="Rectangle_64-4" data-name="Rectangle 64" width="101" height="103" rx="50.5" transform="translate(184 9234)" fill="#fff"/>
+      <g transform="matrix(1, 0, 0, 1, 169, 9224)" filter="url(#Rectangle_64-2)">
+        <rect id="Rectangle_64-5" data-name="Rectangle 64" width="101" height="103" rx="50.5" transform="translate(15 10)" fill="#fff"/>
+      </g>
+      <g id="Rectangle_64-6" data-name="Rectangle 64" transform="translate(184 9234)" fill="none" stroke="#707070" stroke-width="1">
+        <rect width="101" height="103" rx="50.5" stroke="none"/>
+        <rect x="0.5" y="0.5" width="100" height="102" rx="50" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
