@@ -1,0 +1,649 @@
+/*
+Theme Name: Medigarde
+Theme URI: 
+Author: Emilie N'guyen
+Author URI: 
+Description: Site vitrine de Medigarde, Cabinet de recrutement spécialisé dans le secteur du médical, paramédical et médico-social 
+Requires at least: WordPress 5.0
+Version: 1.0
+*/
+/* feuille de style Medigarde-rh*/
+
+@import url(/assets/css/normalize.css);
+@font-face {
+    font-family: 'Century_gothic';
+    src: url(../font/CenturyGothic.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Anton';
+    src: url(../font/Anton-Regular.ttf) format("truetype");
+    font-weight: 600;
+}
+
+/*variables des couleurs & polices*/ 
+:root {
+    --black: #515153;
+    --white: #f8f8f8;
+    --gray: #707070; 
+    --shadow: #55545477; 
+    --green: #3ab54a;
+    --greenlight: #8cc63f;
+    --greenpastel: #97cd78;
+    --blackgradient: #101011;
+    --anton: 'Anton', sans-serif;
+    --century :'Century_gothic', sans-serif;
+}
+
+body{
+    margin: 0;
+    color: var(--white);
+    font-family: var(--century);
+    background: linear-gradient(to bottom right, #f8f8f8,#f2f8f0 );
+}
+
+/* title H1 Anton*/
+h1, h2{
+    font-family: var(--anton);
+    text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+    text-transform: uppercase;
+}
+
+/*CONTAINER*/ 
+.container{
+    margin: 0 20px 0 20px;
+}
+
+.logo_desk{
+    display : none
+}
+
+/*Nav*/
+nav{
+    background-color: white;
+}
+    .icon__bars{
+        margin-left: 90%; 
+        padding-top: 5%;
+    }
+        .bar1, .bar2, .bar3 {
+            width: 22px;
+            height: 2px;
+            background-color: var(--black);
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .bar2{
+            width: 18px;
+        }
+
+    .logo{
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .nav__menu{
+        display: none;
+        flex-direction: column;
+        gap: 40px; 
+        background-color: var(--black);
+        list-style: none;
+        position: absolute;
+        height: 40vh;
+        top: 0;
+        right: 0;
+        padding: 10% 10% 10% 5%;
+        z-index: 52; 
+        width: 51%;
+    }   
+        /*id pour l'UL du menu burger*/
+        #menu-menu-principal{
+            line-height: 50px;
+        }
+            nav ul li{
+                list-style: none;
+            }
+                nav ul li a{
+                    text-decoration: none;
+                    color: var(--white);
+                    transition: 300ms;    
+                }
+                    .nav ul li a:hover{
+                        color: var(--greenpastel);
+                        transition: 300ms;   
+                    }
+    /*croix for close menu mobile*/           
+    .nav__menu__close{
+        position: absolute; 
+        top: 2%; 
+        right: 5%;
+        display: none;
+    }
+
+/*MAIN*/ 
+/*HEADER*/ 
+
+    .header__img{
+        width: 100%;
+        object-fit: fill;
+        position: relative;
+    }
+    .header__bande{
+        width: 100%;
+        height: 20%;
+        background: rgba(0, 0, 0, 0.397);
+        color: var(--white);
+        text-align: center;
+        margin: 5% 0;
+        position: absolute;
+        top: 25%;
+    }
+    .header__bande h2{
+        font-size: 0.9em;
+        font-family: var(--century);
+    }
+    .slogan{
+        text-align: center;
+        color: var(--white);
+        font-style: italic;
+    }
+/* End Header*/
+
+/*SECTION TARGET*/
+    
+    .target__cards{
+        display: flex;
+        justify-content: space-between;
+        gap: 8%;
+        position: relative;
+    }
+
+        .cards__a{
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.8em;
+            padding-right: 5px;
+            color: var(--white); 
+        }
+
+        .target__cards__img{
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 10px;
+            max-width: none;
+        }
+
+        .target__cards__filter{
+            width: 89px;
+            height: 89px;
+            border-radius: 10px; 
+            position: absolute;
+            background: linear-gradient(rgba(0, 0, 0, 0.027), rgba(77, 75, 75, 0.781));
+            top:0;
+            z-index: 10;
+            border: solid var(--white) 1px;
+        }
+
+/*end section target*/
+
+/*Section Service*/
+
+    .services h2{
+        text-align: center;
+    }
+    .services h3{
+        text-align: center;
+    }
+
+        .services__card__img img{
+            width: 100%;            
+        }
+        .services__card{
+            background-color: var(--white);
+            margin-top: 10%;
+            border: solid 1px var(--white); 
+        }
+            .services__card__description{
+                text-align: center;
+                color: var(--black);                
+            }
+                .services__card__description h2{                    
+                    font-family: var(--anton);                    
+                    margin: 0;
+                }
+
+                .services__card__description p{
+                    text-align: justify;
+                    margin: 5%;
+                }
+    
+    .container__cta{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+        .cta_offers{
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            background:#3AB54A;
+            padding: 10px;
+            border-radius: 10px;   
+            margin: 10%;      
+        }
+    .services__schema{
+        width: 100%; 
+    }
+    
+/* end section service 
+
+/* Section Presentation*/
+    .presentation__title{
+        text-align: center;
+    }
+    .presentation__counter{
+        text-align: center;
+    }
+        .counter__number{
+            font-family: var(--anton);
+            font-size: 2em;
+            text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+        }
+            .presentation__description__img{
+                width: 100%;
+            }
+            .presentation__description__des{
+                margin-left: 10%;
+                margin-right: 10%;
+                text-align: justify;
+            }
+/*end section description*/
+
+/*section Valeurs*/
+.valeurs{
+    text-align: center;
+}
+    .valeurs__valeur img{
+        max-width: 100px;
+        max-height: 100px;
+    }
+/*end section Valeurs
+
+/*Section Team */
+.team{
+    text-align: center;
+}
+    .team__title{
+        text-align: center;
+        font-size: 2em;
+    }
+    /* .team__container{
+        display: flex;
+        justify-content: space-between;
+    } */
+        .team__img{
+            width: 80%;
+        }
+        .team__p{
+            text-align: justify;
+        }
+/*end section Team*/
+
+/*Section candidater*/
+
+.candidater__title{
+    text-align: center;
+}
+
+    .candidater__descr.open {
+        display: block;
+        text-align: justify;
+        margin-left: 10%;
+        margin-right: 10%;
+        color: var(--green);
+        font-size: 0.9em;
+    }
+
+    .candidater__descr{
+        text-align: justify;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 15%;
+        color: var(--green);
+        font-size: 0.9em;
+        display: none;
+    }
+
+    .candidater__circle{
+        width: 280px;
+        height: 280px;
+        border: solid 3px var(--green);
+        border-radius: 100%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        /* margin-top: 20%;
+        margin-left: 11%; */
+        /* right: 50%;
+        transform: translateX(0, -50%); */
+    }
+
+    .circle{
+        box-shadow: 0 0 0 0 var(--greenlight);
+        transform: scale(1);
+        animation: pulse 2s infinite;
+        padding: 3%;
+        border-radius: 100px;
+        }
+            .circle:hover{
+                background-color: var(--white);
+                transition: 0.5s ease-in-out;
+                opacity: 95%;
+            }
+
+        .candidater__circle__top{        
+            position: absolute;
+            width: 35%;
+            top: -15%; 
+            left: 30%;
+        }
+
+        .candidater__circle__right{
+            position: absolute;
+            right:-15%;
+            top: 35%;
+            width: 35%;
+        }
+
+        .candidater__circle__bottom{
+            position: absolute;        
+            bottom: -15%;
+            width: 35%;
+            left: 30%; 
+        }
+        .candidater__circle__left{
+            position: absolute;
+            width: 35%;
+            left: -15%; 
+            top: 35%
+        }
+    
+    .candidater__etape{
+        font-family: var(--anton);
+        text-transform: uppercase;
+        color: var(--greenlight);
+        text-shadow: 1px 1px rgba(255, 255, 255, 0.192), -1px -1px var(--shadow);
+        font-size: 2em;
+        position: relative;
+        bottom: 200px;
+        z-index: 51;
+    }
+/*end section candidater*/
+
+/*section formulaire*/ 
+
+.form__title{
+    text-align: center;
+    margin-top: 10%;
+}
+/*end section formulaire*/
+
+/*Section Appli*/
+.appli{
+    background-color: white;
+}
+    .appli h2{
+        color: var(--black);
+        text-align: center;
+        font-size: 1em;
+        padding-top: 5%;
+        font-family: var(--anton);
+        text-transform: uppercase;
+    }
+        .appli__img{
+            width: 80%;
+            object-fit: cover;
+            display: block; 
+            margin: 0 auto;
+        }
+        
+/*end section appli*/ 
+
+/*Section Avis*/ 
+.avis{
+    background-image: url(./assets/img/auxerre.jpg);
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    display: flex;
+
+}
+    .avis__filter{
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        background: linear-gradient(rgba(0, 0, 0, 0.288),rgba(71, 70, 70, 0.445), rgba(49, 49, 49, 0.705))
+    }
+        .avis__first{
+            width: 200px;
+            position: relative;
+            z-index: 51;
+            padding-top: 3%;
+            display: block;
+            margin: 0 auto;
+        }
+        
+            .avis__first h5, p{
+                text-align: center;
+            }
+
+            .avis__first p{
+                font-style: italic;
+                font-size: 0.9em;
+            }
+
+            /*photo de l'avis*/
+            .avis__photo1{
+                border-radius: 100px;
+                width: 100px;
+                height: 100px;
+                background-image: url(./assets/img/avis1.jpg); /*move whith js*/
+                background-size: cover;
+                background-position: center;
+                display: block;
+                margin: auto;
+            }
+
+            .avis__arrow__left svg{
+                width: 50px;
+                color: white;
+                position: absolute;
+                z-index: 52; 
+                left: 10%;
+                top: 20%; 
+            }
+
+            .avis__arrow__right svg{
+                width: 50px;
+                color: white;
+                position: absolute;
+                z-index: 51; 
+                right: -20%;
+                top: 20%;
+            }
+/*End section Avis*/
+
+/*Section Collab*/ 
+
+.collab{
+    overflow-x: scroll;
+    display: none;
+}
+    .collab__title{
+        text-align: center;
+    }
+    .collab__ul{
+        width: 500px;
+        display: flex;
+        gap: 15px;
+        list-style: none;
+    }
+        .collab__logo{
+            max-width: 100%;
+            min-width: 100px;
+            min-height: 70px;
+        }
+/*end setion collab*/
+
+/*Footer*/ 
+footer{
+    background-color: var(--white);
+    display: flex;
+    position: relative;
+    margin-top: 57%;
+}
+
+    footer ul{
+        list-style: none; 
+    }
+
+        footer a{
+            text-decoration: none;
+            color: var(--black);
+        }
+    /*les offres - non visibles en mobile*/ 
+    .footer__offers{
+        display: none;
+    }
+
+    /*réseaux sociaux */ 
+    .footer__social{
+        margin-top: 35%; 
+        position: absolute;
+        left: 54%;       
+    }
+   
+        .footer__social img{
+            width: 25%;
+            margin-right: 10px;        
+        }
+
+    /*mentions légales*/
+    .footer__legal{
+        padding-right: 10%;
+    }
+    .copyright{
+        color: var(--black);
+    }
+
+/*end footer*/ 
+
+/**** 
+*** Page des professionnels 
+****/
+
+/*Section ListePro*/
+
+.listePro h2{
+    text-align: center;
+    margin-top: 10%;
+}
+
+/*end section ListePro*/
+
+/****
+**** Page des spécialistes
+****/
+
+.header__specialiste{
+    width: 100%;
+    object-fit: fill;
+    position: relative;
+}
+
+/*section Mutualisation*/
+.mutualisation__title{
+    text-align: center;
+}
+    .mutualisation__container{
+        margin-bottom: 10%;
+    }
+
+        .mutualisation__img{
+            width: 100%;
+        }
+/*end Section Mutualisation
+
+/****
+**** Page des agences
+****/
+
+/*Section Auxerre & Vannes*/
+.section__auxerre{
+    position: relative;
+    margin-top: 15%;
+}
+    .auxerre, .vannes{
+        display: flex;   
+    }
+    
+        .auxerre__img img, .vannes__img img{
+            width: 180px;
+            height: 180px;
+            object-fit: cover;            
+        }
+        .auxerre__contact, .vannes__contact{
+            width: 180px;
+            height: 200px;
+            padding: 0 20px;
+        }
+            .auxerre__contact h2, .vannes__contact h2{
+            font-size: 1.1em;
+            text-align: center;
+            margin-top: -20%;
+            }
+        .auxerre__contact p, .vannes__contact p{
+            text-align: left;
+        }
+   
+    .auxerre__map{
+        margin-top: 10%;
+        position: absolute;
+        top:85%;
+        left: 10%;
+        height: 350px;
+        width: 80%;
+    }
+
+.section__vannes{
+    position: relative;
+    margin-top: 120%;
+}
+    .vannes{
+        flex-direction: row-reverse;
+        margin-bottom: 110%;
+    }
+        .vannes__map{
+            position: absolute;
+            height: 350px;
+            width: 80%; 
+            top: 100%;
+        }
+
+.presentation{
+    margin-top: 5%;
+}
+/*end Section Agences Auxerre & Vannes*/
+
+
+/****
+**** Page des mentions légales
+****/
+.mentions__p{
+        text-align: justify;
+    }
+
+
+
+    
